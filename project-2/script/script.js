@@ -1,18 +1,10 @@
-const url = 'http://worldtimeapi.org/api/timezone/America/New_York/';
+const api_token = "IJbXDHzuh5bsMKYthQZL2LTvAuPxifeXs1R0tUgp";
+const url = `https://api.thenewsapi.com/v1/news/top?api_token=${api_token}`;
 
 async function getData() {
     const response = await fetch(url);
-    const data = await response.json()
+    const data = await response.json();
     console.log(data);
-
 }
 
 getData();
-
-
-
-
-
-
-
-
