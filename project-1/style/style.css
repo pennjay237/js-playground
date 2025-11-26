@@ -1,0 +1,30 @@
+ div{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    padding: 5px;
+    outline: none;
+}
+
+
+button{
+    padding: 5px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: bisque;
+    font-weight:bold;
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
