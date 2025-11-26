@@ -10,10 +10,12 @@
 // getData();
 
 const api_token = "nMFyXywc7UL2QZFfiAY6OQ==6Ta1eKwYemEq3kGb";
-const url = "https://api.api-ninjas.com/v2/quotes?categories=success,wisdom";
+const urlBase = "https://api.api-ninjas.com/v2/quotes?categories=success,wisdom&limit=5";
 
 async function getData() {
     try {
+        const url = `${urlBase}&_=${new Date().getTime()}`;
+
         const response = await fetch(url, {
             method: "GET",
             headers: {
@@ -26,10 +28,14 @@ async function getData() {
         }
 
         const data = await response.json();
-        console.log(`${data[0].quote} — ${data[0].author}`);
+
+        const randomIndex = Math.floor(Math.random() * data.length); 
+        const randomQuote = data[randomIndex];
+
+        console.log(`${randomQuote.quote} — ${randomQuote.author}`);
 
         const quoteElement = document.getElementById("quote");
-        quoteElement.textContent = `${data[0].quote} — ${data[0].author}`;
+        quoteElement.textContent = `${randomQuote.quote} — ${randomQuote.author}`;
     } catch (error) {
         console.error("Error fetching quote:", error);
         document.getElementById("quote").textContent = "Failed to load quote.";
