@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title> To-Do App</title>
+  <link rel="stylesheet" href="./style/style.css">
 </head>
-<link rel="stylesheet" href="./style/style.css">
 <body>
-    
-    <script src="./script/index.js"></script>
+
+  <h1>Advanced To-Do App</h1>
+
+  <div class="task-input">
+    <input type="text" id="taskTitle" placeholder="Enter task title">
+    <select id="taskCategory">
+      <option value="Work">Work</option>
+      <option value="Personal">Personal</option>
+      <option value="Others">Others</option>
+    </select>
+    <button id="addTaskBtn">Add Task</button>
+  </div>
+
+  <div class="task-filter">
+    <label>Filter by category: </label>
+    <select id="filterCategory">
+      <option value="All">All</option>
+      <option value="Work">Work</option>
+      <option value="Personal">Personal</option>
+      <option value="Others">Others</option>
+    </select>
+
+    <input type="text" id="searchTask" placeholder="Search tasks">
+  </div>
+
+  <ul id="taskList">
+  </ul>
+
+  <script src="./script/index.js"></script>
 </body>
 </html>
