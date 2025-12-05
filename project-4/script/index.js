@@ -2,6 +2,7 @@ const taskTitleInput = document.getElementById("taskTitle");
 const taskCategoryInput = document.getElementById("taskCategory");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const filterCategory = document.getElementById("filterCategory");
+const searchTaskInput = document.getElementById("searchTask");
 const taskList = document.getElementById("taskList");
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
@@ -12,6 +13,13 @@ function renderTasks() {
 
   if (filterCategory.value !== "All") {
     filtered = filtered.filter(task => task.category === filterCategory.value);
+  }
+
+  const searchText = searchTaskInput.value.toLowerCase();
+  if (searchText) {
+    filtered = filtered.filter(task =>
+      task.title.toLowerCase().includes(searchText)
+    );
   }
 
   filtered.forEach((task, index) => {
@@ -59,7 +67,8 @@ addTaskBtn.addEventListener("click", () => {
   renderTasks();
   taskTitleInput.value = "";
 });
-
 filterCategory.addEventListener("change", renderTasks);
+
+searchTaskInput.addEventListener("input", renderTasks);
 
 renderTasks();
