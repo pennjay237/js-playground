@@ -49,4 +49,4 @@ To explore the projects:
     git clone [https://github.com/pennjay237/js-playground.git]
 
 2.  **Navigate** to the specific project folder you wish to view.
-3.  **Open the `index.html`** file in your web browser.
+3.  **Open the `index.html`** file in your web browser
