@@ -1,57 +1,44 @@
 [
 
     {
-        "id": 1,
+        "id": 5,
         "name": "Bismark",
-        "age": 24,
-        "talent": "Coding"
+        
     },
 
     {
-        "id": 2,
-        "name": "London",
-        "age": 46,
-        "talent": "dancing"
+        "id": 5,
+        "name": "London"
     },
 
     {
-        "id": 3,
-        "name": "Dezimo",
-        "age": 32,
-        "talent": "football"
+        "id": 5,
+        "name": "Dezimo"
     },
+
+
 
     {
         "id": 4,
-        "name": "Penn Jude",
-        "age": 25,
-        "talent": "eating"
+        "name": "Penn Jude"
     },
     {
         "id": 5,
-        "name": "Montana",
-        "age": 12,
-        "talent": "coding"
+        "name": "Montana"
     },
     {
         "id": 6,
-        "name": "L-10",
-        "age": 38,
-        "talent": "football"
+        "name": "L-10"
     },
 
 
     {
         "id": 7,
-        "name": "kizito",
-        "age": 22,
-        "talent": "Coding"
+        "name": "kizito"
     },
 
     {
         "id": 8,
-        "name": "Robert Smith",
-        "age": 22,
-        "talent": "jumping"
+        "name": "Robert Smith"
     }
 ]
